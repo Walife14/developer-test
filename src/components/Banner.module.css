@@ -1,0 +1,148 @@
+.container {
+    width: 1280px;
+    margin: 0 auto;
+    background: var(--blue);
+    color: var(--light-font);
+    padding: 25px;
+    border-radius: 25px;
+}
+
+.head {
+    display: flex;
+    flex-wrap: wrap;
+}
+.head img {
+    height: 100px;
+}
+.head div {
+    margin: 0 25px;
+}
+.head h1 {
+    font-size: 38px;
+}
+
+.body {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 25px;
+}
+
+.body > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    padding: 10px 0;
+    cursor: pointer;
+}
+.body > span.selected {
+    background: rgb(67, 67, 245);
+}
+.body > div {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+/* biggest repository container */
+.biggest-repo-container {
+    background: rgb(67, 67, 245);
+    padding: 25px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.biggest-repo-container h2 {
+    font-size: 38px;
+}
+.biggest-repo-container p {
+    padding: 10px;
+}
+.biggest-repo-container div {
+    display: flex;
+    padding: 25px 0;
+}
+.biggest-repo-container span {
+    flex: 1;
+    text-align: center;
+}
+.biggest-repo-container a {
+    color: var(--light-font);
+    display: flex;
+    justify-content: center;
+}
+.biggest-repo-container a:hover {
+    color: rgb(197, 196, 196);
+}
+
+/* repository list container */
+.repo-list-container {
+    background: rgb(67, 67, 245);
+    padding: 25px 50px;
+    overflow-y: scroll;
+    height: 300px;
+}
+.repo-list-container h2 {
+    font-size: 38px;
+    margin-bottom: 25px;
+}
+.repo-list-container ol li {
+    position: relative;
+    margin: 10px 0;
+}
+.repo-list-container ol li a {
+    position: absolute;
+    right: 0;
+    color: var(--font-light);
+}
+.repo-list-container ol li a:hover {
+    color: rgb(197, 196, 196);
+}
+
+@media only screen and (max-width: 1280px) {
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .head > div {
+        margin: 0;
+    }
+    .head h1 {
+        font-size: 22px;
+    }
+    .head p {
+        font-size: 18px;
+    }
+    .body {
+        text-align: center;
+    }
+
+    /* biggest repository container */
+    .biggest-repo-container {
+        display: block;
+        padding: 10px;
+        overflow-y: scroll;
+    }
+    .biggest-repo-container h2 {
+        font-size: 22px;
+    }
+    .biggest-repo-container p {
+        font-size: 18px;
+    }
+    .biggest-repo-container > div {
+        flex-direction: column;
+    }
+
+    /* repository list container */
+    .repo-list-container {
+        padding: 25px;
+    }
+    .repo-list-container h2 {
+        font-size: 22px;
+    }
+    .repo-list-container ol li a {
+        position: relative;
+        display: block;
+    }
+}
